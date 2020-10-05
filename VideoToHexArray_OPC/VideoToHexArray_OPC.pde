@@ -18,7 +18,7 @@ void setup() {
   float spacing = height / 14.0;
   float radius = 6*spacing;
   //opc.ledGrid8x8(0, width/2, height/2, spacing, HALF_PI, false, false);
-  hexCircularArray(0, width/2, height/2, spacing, radius, false);
+  hexCircularArray(0, width/2, height/2, spacing, radius, true);
   opc.setColorCorrection(2.5, 0.4, 0.4, 0.4);
 }
 
