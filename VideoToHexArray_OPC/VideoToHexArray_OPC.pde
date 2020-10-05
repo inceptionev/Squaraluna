@@ -16,9 +16,10 @@ void setup() {
 
   // Map an 8x8 grid of LEDs to the center of the window, scaled to take up most of the space
   float spacing = height / 14.0;
-  float radius = 6*spacing;
+  float radius = 4.7*spacing;
   //opc.ledGrid8x8(0, width/2, height/2, spacing, HALF_PI, false, false);
-  hexCircularArray(0, width/2, height/2, spacing, radius, true);
+  //hexCircularArray(0, width/2, height/2, spacing, radius, true);
+  hexRectangularArray(0, width/2, height/2, spacing, 2.2*radius, 2*radius, false);
   opc.setColorCorrection(2.5, 0.4, 0.4, 0.4);
 }
 
