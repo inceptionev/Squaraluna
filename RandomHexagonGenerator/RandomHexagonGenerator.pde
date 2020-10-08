@@ -32,7 +32,7 @@ void setup() {
   */
   
   
-  
+  /*
   //Gradient Center
   //polygon(640, 480, 24, 6);
   for(int i=0; i<3; i++){
@@ -51,6 +51,27 @@ void setup() {
       polygon(width/2-spacing*rowcount[k]/2+spacing*rowcount[k], height/2-round((7.5+k)*spacing*0.866), radius, 6);
       polygon(width/2+spacing*rowcount[k]/2+spacing*rowcount[k], height/2-round((7.5+k)*spacing*0.866), radius, 6);
     }
+  }
+  */
+  
+  //Gradient Center
+  polygon(640, 480, 24, 6);
+  for(int i=0; i<8; i++){
+    //top row
+    for(int k=0; k < i+1 ; k++) {
+      polygon(width/2-spacing*i/2+spacing*k, height/2-i*spacing*0.866, radius, 6);
+    }
+    
+    for(int k=0; k < i+1 ; k++) {
+      polygon(width/2-spacing*i/2+spacing*k, height/2+i*spacing*0.866, radius, 6);
+    }
+        
+    //sides
+    for(int k=7-i+1; k < 7+i ; k++) {
+      polygon(width/2-spacing*(i-abs((float)k-7)/2), height/2-(k-7)*spacing*0.866, radius, 6);
+      polygon(width/2+spacing*(i-abs((float)k-7)/2), height/2-(k-7)*spacing*0.866, radius, 6);
+    }
+    
   }
   
  
